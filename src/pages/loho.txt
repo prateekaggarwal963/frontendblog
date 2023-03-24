@@ -1,0 +1,44 @@
+
+import { Card, CardBody, CardHeader, Col, Container, FormGroup, Input, Label, Row,Form, Button } from "reactstrap";
+import Base from "../components/Base";
+const Login=()=>{
+    return(
+        <Base>
+        <Container>
+            <Row className="mt-4">
+                <Col sm={{size:6,offset:3}}>
+                    <Card color="dark" inverse>
+                        <CardHeader>
+                            <h3>Login Here</h3>
+                        </CardHeader>
+                        <CardBody>
+                            <Form>
+                                {/*Email*/}
+                                <FormGroup>
+                                    <Label for="email">Enter Email</Label>
+                                    <Input id="email" type="email" placeholder="email"/>
+                                </FormGroup>
+                                
+                                {/*Password*/}
+                                <FormGroup>
+                                    <Label for="password">Enter Password</Label>
+                                    <Input id="password" type="password" placeholder="password"/>
+                                </FormGroup>
+
+                                {/*button*/}
+                                <Container className="text-center">
+                                <Button color="light" outline>Login</Button>
+                                <Button color="secondary" type="reset" className="ms-2">Reset</Button>
+                                    
+                                </Container>
+                            </Form>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
+        </Base>
+    );
+};
+
+export default Login;
